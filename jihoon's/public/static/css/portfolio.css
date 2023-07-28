@@ -1,1 +1,81 @@
 @charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap');
+
+*{
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+doby{
+	margin: 0;
+}
+
+/* 테스트용*
+
+*{
+	border :1px solid black;
+	
+}
+
+/* 테스트용*/
+
+#main_container{
+	width:100%;
+	height: 100%;
+	text-align: center;
+}
+
+#main_wrapper{
+	width: 1000px;
+	height: 100%;
+	display: inline-block;
+}
+
+
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+
+#profile_container{
+	margin-top: 100px;
+	position: relative;
+}
+
+
+#profile_photo{
+	float: left;
+	width:30%;
+	overflow: hidden;
+}
+#profile_img{
+	width:100%;
+}
+
+
+#profile_detail{
+	float: right;
+	width:69%;
+	height: 100%;
+}
+
+#profile_detail_korean{
+	font-size: 200%;
+	text-align: left;
+}
+#profile_detail_english{
+	font-size: 175%;
+	font-weight: 100;
+	text-align: left;
+}
+
+#profile_table{
+	margin-top: 30px;
+}
+
+
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+.profile_table_tr{
+	height: 60px;
+}
+
+.profile_contents{
+	text-align: left;
+}
