@@ -6,8 +6,20 @@
 	font-family: 'Noto Sans KR', sans-serif;
 }
 
-doby{
+body{
 	margin: 0;
+	background-color: #eaeaea;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+a:hover, 
+a:focus {
+	font-weight: bold;
+	text-decoration: underline;
 }
 
 /* 테스트용*
@@ -19,6 +31,18 @@ doby{
 
 /* 테스트용*/
 
+/*사이드바*/
+
+#sideMenu{
+	width:100px;
+	position: absolute;
+	left: 1050px;
+	top: 300px;
+	border: 1px solid black;
+}
+
+
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
 #main_container{
 	width:100%;
 	height: 100%;
@@ -29,14 +53,18 @@ doby{
 	width: 1000px;
 	height: 100%;
 	display: inline-block;
+	position: relative;
 }
 
+.container{
+	width: 100%;
+	float: left;
+}
 
 /* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
 
 #profile_container{
 	margin-top: 100px;
-	position: relative;
 }
 
 
@@ -52,7 +80,7 @@ doby{
 
 #profile_detail{
 	float: right;
-	width:69%;
+	width:67%;
 	height: 100%;
 }
 
@@ -79,3 +107,44 @@ doby{
 .profile_contents{
 	text-align: left;
 }
+
+
+.icon_div{
+	width:22px;
+}
+
+.icon_img{
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+.profile_text{
+	margin-left: 5px;
+}
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+
+#skill_container{
+	width: 100%;
+	height: 100%;
+	margin-top: 50px;
+	text-align: left;
+}
+
+#skill_headline{
+	font-size:30px;
+	font-weight: bold;	
+	margin: 35px 0 35px;
+}
+
+.skill_title{
+	font-size:22px;
+	font-weight: bold;
+	margin: 45px 0 15px;
+}
+
+.skill_contents{
+	font-size:15px;
+	color: #7b7b7b;
+	line-height: 170%;
+}
+
