@@ -18,7 +18,7 @@ $(document).ready(function(){
 	  
 	  $(window).scroll(function() {
 	    var position = $(window).scrollTop(); 
-	    $("#sideMenu").stop().animate({"top":position+currentPosition+"px"},500);
+	    $("#sideMenu").stop().animate({"top":position+currentPosition+"px"},300);
 	  });
 	  
 
@@ -28,6 +28,19 @@ $(document).ready(function(){
 		  }, 300);
 		  return false;
 		});
+	  
+	  $(".popup_title").click(function(){
+		  
+		  if($(this).siblings(".wrapper").css("display") =="none"){
+			  $(this).siblings(".wrapper").show();
+			  $(this).find("span").text("▲");
+		  }else{
+			  $(this).siblings(".wrapper").hide();
+			  $(this).find("span").text("▼");
+		  }
+
+		  
+	  });
 });
 </script>
 <body>
@@ -56,7 +69,7 @@ $(document).ready(function(){
 									</div>
 								</td>
 								<td class="profile_contents">
-									<p class="profile_text" title="새창으로 열기">
+									<p class="profile_text" title="새 창으로 열기">
 										<a href="highzess@gmail.com" target="_blank">
 											highzess@gmail.com
 										</a>
@@ -82,7 +95,7 @@ $(document).ready(function(){
 									</div>
 								</td>
 								<td class="profile_contents">
-									<p class="profile_text" title="새창으로 열기">
+									<p class="profile_text" title="새 창으로 열기">
 										<a href="https://highzess.github.io/portfolio" target="_blank">
 											https://highzess.github.io/portfolio
 										</a>
@@ -96,7 +109,7 @@ $(document).ready(function(){
 									</div>
 								</td>
 								<td class="profile_contents">
-									<p class="profile_text" title="새창으로 열기">
+									<p class="profile_text" title="새 창으로 열기">
 										<a href="https://github.com/HIGHZESS" target="_blank">
 											https://github.com/HIGHZESS
 										</a>
@@ -113,56 +126,73 @@ $(document).ready(function(){
 		<!-- 기술 컨테이너 시작 -->
 		<div id="skill_container" class="container fade">
 			<hr />
-			<div id="skill_headline">
+			<div class="headline">
 				<p># 사용 가능한 기술</p>
 			</div>
 			
-			<div class="skill_title">
+			<div class="title">
 				<p>Java</p>
 			</div>
-			<div class="skill_contents">
+			<div class="contents">
 				<p>Java를 사용하여 Web프로젝트를 경험해보았습니다.<br/>객체지향 프로그래밍에 대해 이해하고 있습니다.<br/>Java에서 제공하는 클래스와 메소드를 적절하게 사용할 수 있습니다.
 				</p>
 			</div>
-			<div class="skill_title">
+			<div class="title">
 				<p>Oracle / DBMS</p>
 			</div>
-			<div class="skill_contents">
+			<div class="contents">
 				<p>기본적인 CRUD와 관련된 sql문을 작성할 수 있습니다.<br/>함수와 프로시저에 대한 이해를 가지고있습니다.<br/>JDBC를 이해하고 사용하며, MyBatis를 통한 스프링프레임워크와의 연동을 사용할 수 있습니다.
 				</p>
 			</div>
-			<div class="skill_title">
+			<div class="title">
 				<p>JavaScript</p>
 			</div>
-			<div class="skill_contents">
+			<div class="contents">
 				<p>JavaScript에 대한 기본적인 이해를 가지고 있습니다.<br />JQuery 프레임워크를 이용하여 Web사이트에 적용할 수 있습니다.<br />Ajax를 사용하여 동적인 web사이트 페이지를 만들어본 경험이 있습니다.
 				</p>
 			</div>
-			<div class="skill_title">
+			<div class="title">
 				<p>HTML & CSS</p>
 			</div>
-			<div class="skill_contents">
+			<div class="contents">
 				<p>HTML과 CSS를 통하여 기본적인 웹사이트의 프론트엔드를 제작, 수정할 수 있습니다.
 				</p>
 			</div>
-			<div class="skill_title">
+			<div class="title">
 				<p>Git</p>
 			</div>
-			<div class="skill_contents">
+			<div class="contents">
 				<p>Git을 활용한 소스코드 버전 관리 및 협업을 할 수 있습니다. <br />Github를 사용하여 프로젝트 관리 경험이 있습니다.
 				</p>
 			</div>
 			
 		</div>
 		<!-- 기술 컨테이너 끝 -->
+		<!-- 프로젝트 컨테이너 시작 -->
+		<div id="project_container" class="container fade">
+			<hr />
+			
+			<div class="headline popup_title">
+				<p id="project_container_title"><span id="title_span">▲</span> 팀 프로젝트, WONDER</p>
+			</div>
+			
+			<div class="wrapper">
+				<div id="project_int_container">
+					<div id="project_int_imgContainer">
+						<img src="./static/img/wonder/main.png" id="project_int_img">
+					</div>
+				</div>
+			</div>	
+			
+		</div>
 		
 		
 		<!-- 사이드메뉴바 -->
 		<div id="sideMenu" class="scroll">
 			<ul>
 				<li><a href="#main_wrapper">소개</a></li>
-				<li><a href="#skill_headline">사용기술</a></li>
-				<li><a href="#">세번째</a></li>
+				<li><a href="#skill_container">사용기술</a></li>
+				<li><a href="#project_container">프로젝트</a></li>
 			</ul>
 		</div>
 	</div>
